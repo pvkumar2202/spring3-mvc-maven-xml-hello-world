@@ -1,4 +1,4 @@
-node ('Jenkins_slave_node2') {
+node ('ABC') {
    def mvnHome
    stage('getscm') { // for display purposes
       // Get some code from a GitHub repository
