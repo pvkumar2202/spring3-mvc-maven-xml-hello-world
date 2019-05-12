@@ -21,12 +21,4 @@ node {
       
       archive 'target/*.war'
    }
-   stage ('deploy'){
-   echo 'deployment started'
-        sh "cp /var/lib/jenkins/workspace/Script\ Based\ Pipeline/Scriptbased_pipeline_proj2/target/*.war /opt/tomcat/webapps/"
-}
-   stage ('deploy'){
-   echo 'deployment started'
-        sh "scp /var/lib/jenkins/workspace/Script\ Based\ Pipeline/Scriptbased_pipeline_proj2/target/*.war root/root123@192.168.0.44:/opt/tomcat/webapps/"
-}
 }
