@@ -1,4 +1,4 @@
-node {
+node ('Jenkins_slave_node2') {
    def mvnHome
    stage('getscm') { // for display purposes
       // Get some code from a GitHub repository
@@ -21,12 +21,4 @@ node {
       
       archive 'target/*.war'
    }
-   stage ('deploy'){
-   echo 'deployment started'
-        sh "cp /var/lib/jenkins/workspace/Script_Based_Pipeline/Scriptbased_pipeline_proj2/target/*.war /opt/tomcat/webapps/"
-}
-   stage ('deploy'){
-   echo 'deployment started'
-        sh "scp /var/lib/jenkins/workspace/Script_Based_Pipeline/Scriptbased_pipeline_proj2/target/*.war root/root123@192.168.0.44:/opt/tomcat/webapps/"
-}
 }
